@@ -12,7 +12,9 @@ services:
     volumes:
       - ./docker/images/nginx/default.conf:/etc/nginx/conf.d/default.conf
       - ./xls-exchanger:/var/www/xls-exchanger
-      - ./tmp:/tmp
+      - ./tmp/json:/tmp/json
+      - ./tmp/xls:/tmp/xls
+      - ./tmp/logs:/tmp/logs
 
   php:
     container_name: php
@@ -20,4 +22,6 @@ services:
     restart: always
     volumes:
       - ./xls-exchanger:/var/www/xls-exchanger
-      - ./tmp:/tmp
+      - ./tmp/json:/tmp/json
+      - ./tmp/xls:/tmp/xls
+      - ./tmp/logs:/tmp/logs
