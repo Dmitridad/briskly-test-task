@@ -1,0 +1,13 @@
+{
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.18"
+    },
+    "autoload": {
+        "psr-4": {
+            "XlsExchanger\\Handlers\\": "core/handlers",
+            "XlsExchanger\\Exchange\\": "core/exchange",
+            "XlsExchanger\\Export\\": "core/export",
+            "XlsExchanger\\Log\\": "core/log"
+        }
+    }
+}
